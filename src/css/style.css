@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap');
+
+body {
+    background-color: #827e7ede;
+    color: #333333;
+    overflow: hidden;
+}
+
+body.modo-escuro {
+    background-color: #0e0f3d;
+    color: #f5f5f5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1110px;
+    padding: 15px 10px;
+}
+
+header .logo,
+header .imagem-botao {
+    height: 2.2rem;
+    transition: 0.2s ease-in-out;
+}
+
+header .logo:hover,
+header .imagem-botao:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+header #botao-alterar-tema {
+    border: none;
+    background: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+main .listagem-pokemon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 68.75rem;
+    gap: 15px;
+}
+
+@keyframes downUp{
+    from{
+        transform: translateY(800px);
+    }
+
+    to{
+        transform: translateY(0);
+    }
+}
+
+main .card {
+    background-color: #d8e3ec;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 12.5rem;
+    max-height: 16.5rem;
+    transition: 0.2s ease-in-out;
+    gap: 8px;
+}
+
+main .card:hover {
+    background-color: #96d9d6;
+    transform: scale(1.05);
+}
+
+.modo-escuro .card {
+    background-color: #a8a8a8;
+}
+
+main .card .info {
+    border: solid 0.13rem black;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+}
+
+main .card .info span {
+    text-transform: uppercase;
+    font-size: 1.02rem;
+}
+
+main .card .imagem-pokemon {
+    height: 4.2rem;
+    width: 4.2rem;
+}
+
+main .card .tipos {
+    display: flex;
+    gap: 15px;
+}
+
+main .card .tipo {
+    padding: 0.5rem;
+    border-radius: 8px;
+    color: #fff;
+}
+
+main .card .desc {
+    max-height: 80px;
+    overflow-y: scroll;
+    font-size: 0.9rem;
+    padding-right: 10px;
+}
+
+.grama {
+    background-color: #7ac74c;
+}
+
+.veneno {
+    background-color: #df67ddfb;
+}
+
+.fogo {
+    background-color: #ee8130;
+}
+
+.agua {
+    background-color: #6390f0;
+}
+
+.inseto {
+    background-color: #a6b91a;
+}
+
+.voador {
+    background-color: #a284fb;
+}
+
+.card:nth-child(1){
+    animation: downUp 0.5s;
+}
+
+.card:nth-child(2){
+    animation: downUp 1s;
+}
+
+.card:nth-child(3){
+    animation: downUp 1.5s;
+}
+
+.card:nth-child(4){
+    animation: downUp 1.8s;
+}
+
+.card:nth-child(5){
+    animation: downUp 2.3s;
+}
+
+.card:nth-child(6){
+    animation: downUp 2s;
+}
+
+.card:nth-child(7){
+    animation: downUp 2.3s;
+}
+
+.card:nth-child(8){
+    animation: downUp 2.8s;
+}
+
+.card:nth-child(9){
+    animation: downUp 3.4s;
+}
+
+.card:nth-child(10){
+    animation: downUp 3.8s;
+}
+
+@media(max-width: 1100px) {
+
+    main .card:nth-child(9) .desc,
+    main .card:nth-child(10) .desc {
+        overflow-y: visible;
+    }
+}
