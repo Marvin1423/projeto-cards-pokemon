@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap');
 
 body {
-    background-color: #827e7ede;
+    background: url(../imagens/wallpaperflare.com_wallpaper.jpg) no-repeat center center;
+    background-size: cover;
     color: #333333;
     overflow: hidden;
 }
 
 body.modo-escuro {
-    background-color: #0e0f3d;
+    background: url(../imagens/wallpaperflare.com_wallpaper2.jpg) no-repeat center;
+    background-size: cover;
     color: #f5f5f5;
 }
 
@@ -27,7 +29,7 @@ header .imagem-botao {
 
 header .logo:hover,
 header .imagem-botao:hover {
-    transform: scale(1.05);
+    transform: scale(1.2);
     cursor: pointer;
 }
 
@@ -61,7 +63,8 @@ main .listagem-pokemon {
 }
 
 main .card {
-    background-color: #d8e3ec;
+    background: rgb(250,193,69);
+    background: linear-gradient(0deg, rgba(250,193,69,0.9108018207282913) 0%, rgba(192,253,45,0.8827906162464986) 100%);
     border-radius: 10px;
     padding: 10px;
     display: flex;
@@ -75,12 +78,21 @@ main .card {
 }
 
 main .card:hover {
-    background-color: #96d9d6;
+    box-shadow: 2px 2px 65px #ff0101;
     transform: scale(1.05);
 }
 
 .modo-escuro .card {
-    background-color: #a8a8a8;
+    background: rgb(157,69,250);
+    background: linear-gradient(0deg, rgba(157,69,250,0.9023984593837535) 0%, rgba(65,45,253,0.8827906162464986) 100%);
+}
+
+.modo-escuro .card .info{
+    border: solid 0.13rem;
+}
+
+.modo-escuro .card .tipo{
+    color: black;
 }
 
 main .card .info {
